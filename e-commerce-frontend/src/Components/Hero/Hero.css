@@ -1,0 +1,75 @@
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(249, 223, 229, 0.5), rgba(249, 223, 229, 0.5)), url('../Assets/upes.jpg') center/cover no-repeat; /* Background image with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 9%;
+    position: relative; 
+}
+.hero-left{
+    line-height: 1.1;
+}
+.hero-left h2{
+    color:white;
+    font-size: 40px;
+    font-weight: 900;
+    -webkit-text-stroke: 0.2px black; 
+    text-stroke: 0.2px black; 
+}
+
+
+
+.hero-left p{
+    color: #001f3f;
+    font-size: 50px;   
+    font-weight: 700;
+}
+
+
+.hero-right img{
+    width: 450px;
+}
+
+@media(max-width:1200px){
+    
+    .hero{
+        padding: 10px 6%;
+    }
+    .hero-left p{
+        font-size: 70px;
+    }
+    .hero-right img{
+        width: 400px;
+    }
+   
+}
+@media(max-width:900px){
+   
+    .hero-left p{
+        font-size: 45px;
+    }
+    .hero-right img{
+        width: 350px;
+    }
+   
+}
+@media(max-width:700px){
+   .hero{
+    padding: 0 10%;
+   }
+    .hero-left p{
+        font-size: 55px;
+    }
+    .hero-right{
+        display: none;
+    }
+    .hero-left{
+        line-height: 1.2;
+    }
+    .hero-left h2{
+        margin-bottom: 20px;
+    }
+  
+    
+}
