@@ -114,10 +114,25 @@ app.post("/addproduct", async (req, res) => {
 //Displaying all products
 app.get("/allproducts", async (req, res) => {
 	let products = await Product.find({});
+  // console.log(products);
   console.log("All Products");
   //For the frontend
     res.send(products);
+  const { spawn } = require('child_process');
+  // Serialize the products array to JSON
+  const productsJSON = JSON.stringify(products);
+  const childPython = spawn('python', ['flask.py', productsJSON]);
+  childPython.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+  childPython.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
+  });
+  childPython.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
 });
+
 
 //Remove product from database
 app.post("/removeproduct", async (req, res) => {
