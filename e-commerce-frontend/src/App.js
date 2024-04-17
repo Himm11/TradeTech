@@ -7,7 +7,7 @@ import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
-import men_banner from './Components/Assets/banner_mens.png'
+import men_banner from './Components/Assets/banner_mens.png';
 
 
 function App() {

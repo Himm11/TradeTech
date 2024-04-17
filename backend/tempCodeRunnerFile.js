@@ -1,0 +1,1 @@
+let products = await Product.find({});

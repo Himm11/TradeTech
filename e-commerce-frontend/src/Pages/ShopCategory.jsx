@@ -4,6 +4,7 @@ import { ShopContext } from '../Context/ShopContext'
 import dropdown_icon from '../Components/Assets/dropdown_icon.png'
 import Item from '../Components/Item/Item'
 import new_collection from '../Components//Assets/new_collections'
+import ChatBot from '../Components/ChatBot/ChatBot'
 
 const ShopCategory = (props) => {
   const {all_product} = useContext(ShopContext);
@@ -34,6 +35,7 @@ const ShopCategory = (props) => {
 
         })}
       </div>
+      <ChatBot/>
 
       
     </div>
